@@ -3,13 +3,12 @@
 #include <QTimer>
 #include <qwt/qwt_plot.h>
 #include <qwt/qwt_plot_curve.h>
-#include <qwt/qwt_point_data.h>
 
 int main(int argc, char **argv)
 {
   QApplication a(argc, argv);
 
-  QwtPlot plot(QwtText("travis_qmake_gcc_cpp14_qwt"));
+  QwtPlot plot(QwtText("travis_qmake_gcc_cpp14_qt4_qwt"));
   plot.setGeometry(0,0,640,400);
   plot.setAxisScale(QwtPlot::xBottom, 0.0,2.0 * M_PI);
   plot.setAxisScale(QwtPlot::yLeft,-1.0,1.0);
@@ -22,8 +21,7 @@ int main(int argc, char **argv)
     xs.push_back(x);
     ys.push_back(std::sin(x) * std::cos(x));
   }
-  QwtPointArrayData * const data = new QwtPointArrayData(&xs[0],&ys[0],xs.size());
-  curve.setData(data);
+  curve.setData(&xs[0],&ys[0],xs.size());
   curve.attach(&plot);
 
   plot.show();
