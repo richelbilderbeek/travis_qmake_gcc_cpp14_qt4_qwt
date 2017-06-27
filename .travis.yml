@@ -21,7 +21,7 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script: 
-  - qmake
+  - qmake -qt=qt4
   - make
   - ./travis_qmake_gcc_cpp14_qt4_qwt
 
