@@ -28,3 +28,5 @@ script:
 
 after_failure:
   - apt-cache search libqwt
+  - cd /usr/include
+  - find . -name qwt_plot.h
