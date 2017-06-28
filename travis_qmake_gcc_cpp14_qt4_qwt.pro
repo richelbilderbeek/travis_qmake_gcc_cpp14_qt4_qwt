@@ -12,6 +12,6 @@ QMAKE_CXXFLAGS += -std=c++14
 QT += core widgets
 
 # Qwt
-LIBS += -lqwt5
+LIBS += -lqwt
 INCLUDEPATH += /usr/include/qwt-qt4
 
