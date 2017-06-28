@@ -14,3 +14,4 @@ QT += core widgets
 # Qwt
 CONFIG += qwt
 LIBS += -lqwt
+INCLUDEPATH += /usr/include/qwt-qt4
