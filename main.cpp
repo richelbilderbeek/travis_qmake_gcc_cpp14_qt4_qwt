@@ -1,8 +1,8 @@
 #include <cmath>
 #include <QApplication>
 #include <QTimer>
-#include <qwt/qwt_plot.h>
-#include <qwt/qwt_plot_curve.h>
+#include <qwt_plot.h>
+#include <qwt_plot_curve.h>
 
 int main(int argc, char **argv)
 {
